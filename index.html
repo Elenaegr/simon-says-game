@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon says game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div>
+        <button type="button" id="startBtn">START</button>
+        <button type="button" id="userTurnBtn">USER'S TURN</button>
+    </div>
+    <div id="levelCntr">Level <span id="levelCounter">1</span></div>
+    <div class="buttons">
+        <!-- green frame -->
+        <img src="simon-logo.png" alt="Centered Simon says logo">
+        <svg id="sgvGreen" width="316" height="316" viewBox="0 0 316 316" fill="none">
+            <path
+                d="M0 316C7.32676e-06 232.192 33.2928 151.816 92.5543 92.5543C151.816 33.2928 232.192 -9.99405e-07 316 0V196.852V199.534C314.933 199.534 313.867 199.549 312.803 199.578C283.074 200.393 254.733 212.559 233.646 233.646C211.804 255.488 199.534 285.111 199.534 316H0Z"
+                fill="#00BB00" />
+        </svg>
+        <!-- red frame -->
+        <svg id="sgvRed" width="316" height="316" viewBox="0 0 316 316" fill="none">
+            <path
+                d="M-1.07562e-05 0C83.8084 7.32676e-06 164.184 33.2928 223.446 92.5543C282.707 151.816 316 232.192 316 316L119.148 316H116.466C116.466 314.933 116.451 313.867 116.422 312.803C115.607 283.074 103.441 254.733 82.3539 233.646C60.5123 211.804 30.8887 199.534 -1.07562e-05 199.534L-1.07562e-05 0Z"
+                fill="#BB0000" />
+        </svg>
+        <!-- yellow frame -->
+        <svg id="sgvYellow" width="316" height="316" viewBox="0 0 316 316" fill="none">
+            <path
+                d="M316 316C232.192 316 151.816 282.707 92.5543 223.446C33.2928 164.184 -9.99405e-07 83.8084 0 -1.43051e-06H196.852H199.534C199.534 1.06722 199.549 2.13293 199.578 3.19686C200.393 32.9264 212.559 61.2669 233.646 82.3539C255.488 104.196 285.111 116.466 316 116.466V316Z"
+                fill="#FCCA3A" />
+        </svg>
+        <!-- blue frame -->
+        <svg id="sgvBlue" width="316" height="316" viewBox="0 0 316 316" fill="none">
+            <path
+                d="M316 -1.07562e-05C316 83.8084 282.707 164.184 223.446 223.446C164.184 282.707 83.8084 316 -1.43051e-06 316V119.148V116.466C1.06722 116.466 2.13293 116.451 3.19686 116.422C32.9264 115.607 61.2669 103.441 82.3539 82.3539C104.196 60.5123 116.466 30.8887 116.466 -1.07562e-05H316Z"
+                fill="#0000BB" />
+        </svg>
+    </div>
+
+    <!-- Audio files from amazon servers -->
+    <audio id="audio1" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" data-sound="red"></audio>
+    <audio id="audio2" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" data-sound="green"></audio>
+    <audio id="audio3" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" data-sound="blue"></audio>
+    <audio id="audio4" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" data-sound="yellow"></audio>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
